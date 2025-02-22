@@ -1,0 +1,126 @@
+java.util.Random;
+import java.util.Scanner;
+
+public class Rock_Paper_Scissor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome!\nLets play Rock Paper Scissor");
+        System.out.println("Pick any number from 1 to 3");
+        System.out.println("1 for Rock\n2 for Paper\n3 for Scissor");
+        int a = sc.nextInt();
+        switch (a){
+            case 1 :
+                System.out.println("You have picked Rock");
+                break;
+            case 2 :
+                System.out.println("You have picked Paper");
+                break;
+            case 3 :
+                System.out.println("You have picked Scissor");
+                break;
+            default:
+                System.out.println("Invalid input!\nPick a number from 1 to 3");
+        }
+        Random ra = new Random();
+        int b = ra.nextInt(1,4);
+        if(a <=3){
+            switch (b){
+                case 1 :
+                    System.out.println("Computer picked Paper");
+                    break;
+                case 2 :
+                    System.out.println("Computer picked Rock");
+                    break;
+                case 3 :
+                    System.out.println("Computer picked Scissor");
+                    break;
+            }
+            if ((a==1 && b == 3) || (a==2 && b ==2) || (a ==3 && b==1)){
+                System.out.println("You won");
+            }
+            else if((a==1 && b ==2) || (a==2 && b==1) || (a==3&&b==3)){
+                System.out.println("Its a draw");
+            }
+            else {
+                System.out.println("You lost");
+            }
+        }
+        System.out.println("Try one more time");
+        int c = sc.nextInt();
+        switch (c){
+            case 1 :
+                System.out.println("You have picked Rock");
+                break;
+            case 2 :
+                System.out.println("You have picked Paper");
+                break;
+            case 3 :
+                System.out.println("You have picked Scissor");
+                break;
+            default:
+                System.out.println("Invalid input!\nPick a number from 1 to 3");
+        }
+        Random ra2 = new Random();
+        int d = ra2.nextInt(1,4);
+        if(c <=3) {
+            switch (d) {
+                case 1:
+                    System.out.println("Computer picked Paper");
+                    break;
+                case 2:
+                    System.out.println("Computer picked Rock");
+                    break;
+                case 3:
+                    System.out.println("Computer picked Scissor");
+                    break;
+                default:
+                    System.out.println("Error!");
+            }
+            if ((c == 1 && d == 3) || (c == 2 && d == 2) || (c == 3 && d == 1)) {
+                System.out.println("You won");
+            } else if ((c == 1 && d == 2) || (c == 2 && d == 1) || (c == 3 && d == 3)) {
+                System.out.println("Its a draw");
+            } else {
+                System.out.println("You lost");
+            }
+        }
+        System.out.println("Last try");
+        int e = sc.nextInt();
+        switch (e){
+            case 1 :
+                System.out.println("You have picked Rock");
+                break;
+            case 2 :
+                System.out.println("You have picked Paper");
+                break;
+            case 3 :
+                System.out.println("You have picked Scissor");
+                break;
+            default:
+                System.out.println("Invalid input!\nPick a number from 1 to 3");
+        }
+        Random ra3 = new Random();
+        int f = ra3.nextInt(1,4);
+        if(e <=3) {
+            switch (f) {
+                case 1:
+                    System.out.println("Computer picked Paper");
+                    break;
+                case 2:
+                    System.out.println("Computer picked Rock");
+                    break;
+                case 3:
+                    System.out.println("Computer picked Scissor");
+                    break;
+            }
+            if ((e == 1 && f == 3) || (e == 2 && f == 2) || (e == 3 && f == 1)) {
+                System.out.println("You won");
+            } else if ((e == 1 && f == 2) || (e == 2 && f == 1) || (e == 3 && f == 3)) {
+                System.out.println("Its a draw");
+            } else {
+                System.out.println("You lost");
+            }
+        }
+        sc.close();
+    }
+}
